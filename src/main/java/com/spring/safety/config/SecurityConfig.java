@@ -42,13 +42,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .cors().disable()
                 .authorizeRequests()
-                .antMatchers("/register","/home").permitAll()
 //                .anyRequest()
 //                .authenticated()
-                .anyRequest().permitAll()
-                .and()
-                .formLogin()
-                .loginPage("/login");
+                .anyRequest().permitAll();
     }
 
 }

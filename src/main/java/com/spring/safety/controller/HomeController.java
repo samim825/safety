@@ -22,7 +22,7 @@ public class HomeController {
     @GetMapping("/")
     public String goHome(){
 
-        return "Welcome to our home page";
+        return "index";
     }
 
     @PostMapping("/register")
@@ -36,4 +36,12 @@ public class HomeController {
 
         return "home";
     }
+
+    @GetMapping("/hospital")
+    public String goHospitalPage(){
+
+        return "single-hospital";
+    }
+
+
 }
