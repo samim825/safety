@@ -43,5 +43,10 @@ public class HomeController {
         return "single-hospital";
     }
 
+    @GetMapping("/admin/login")
+    public String loginPage(){
+        return "admin/login";
+    }
+
 
 }
