@@ -7,12 +7,15 @@ import com.spring.safety.service.impl.HospitalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.jws.WebParam;
 
 @Controller
+@RequestMapping("/admin/")
 public class HospitalController {
 
     @Autowired
@@ -32,10 +35,11 @@ public class HospitalController {
     }
 
     @PostMapping("/update")
-    public ModelAndView updateHospital(Hospital hospital){
+    public ModelAndView updateHospital(@ModelAttribute Hospital hospital){
 
+        System.out.println(hospital.toString());
         ModelAndView modelAndView = new ModelAndView();
-        hospitalService.update(hospital);
+//        hospitalService.update(hospital);
         return modelAndView;
     }
 

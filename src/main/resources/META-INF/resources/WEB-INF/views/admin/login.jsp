@@ -45,6 +45,7 @@
                             <!-- Form -->
                             <form action="/admin/login" method="post" class="row g-1 p-3 p-md-4">
                                 <div class="col-12 text-center mb-5">
+                                    <h1 style="color:black" class="text-center">${msg}</h1>
                                     <h1>Sign in</h1>
                                     <span>Free access to our dashboard.</span>
                                 </div>

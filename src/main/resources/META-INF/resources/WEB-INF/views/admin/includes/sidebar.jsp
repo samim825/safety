@@ -13,6 +13,7 @@
                 <a class="m-link active" data-bs-toggle="collapse" data-bs-target="#dashboard" href="/admin">
                     <i class="icofont-ui-home fs-5"></i> <span>Dashboard</span> </a>
             </li>
+            <li><a class="m-link" href="/admin/about"><i class="icofont-hospital fs-5"></i> <span>About</span></a></li>
 
             <li class="collapsed">
                 <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Doctor" href="#">

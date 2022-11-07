@@ -20,7 +20,7 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
-   @GetMapping("/admin")
+   @GetMapping({"/admin", "/admin/"})
     public String goHomePage(){
 
         System.out.println("Admin index page");
@@ -57,21 +57,33 @@ public class AdminController {
     }
 
     @PostMapping("/admin/registration")
-    public String adminPage(@ModelAttribute User user, @ModelAttribute Hospital hospital){
+    public ModelAndView adminPage(@ModelAttribute User user, @ModelAttribute Hospital hospital){
 
-//        @RequestParam("hospitalName") String hospitalName
-        System.out.println(hospital.toString());
-//        Hospital hospital = new Hospital()
-        System.out.println(user.toString());
-        System.out.println("admin registration page visited");
-//        hospitalService.save(hospital);
+        ModelAndView modelAndView = new ModelAndView();
         user.setHospital(hospital);
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
-        userService.save(user);
 
-        return "admin/registration";
+        try{
+            userService.save(user);
+            String msg = "Successfully registered.";
+            modelAndView.addObject("msg",msg);
+            modelAndView.setViewName("/admin/login");
+        }catch (Exception e){
+            String msg = "Something went wrong!!!please try again";
+            modelAndView.addObject("msg",msg);
+            modelAndView.setViewName("admin/registration");
+            e.printStackTrace();
+        }
+
+        return modelAndView;
+    }
+
+    @GetMapping("/admin/about")
+    public String goAboutPage(){
+
+       return "admin/about";
     }
 
 }
