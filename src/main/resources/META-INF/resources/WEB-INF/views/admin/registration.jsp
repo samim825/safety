@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>:: I-Health:: Signup</title>
+    <title>:: Safety :: Signup</title>
     <link rel="icon" href="../favicon.ico" type="image/x-icon"> <!-- Favicon-->
     <!-- project css file  -->
     <link rel="stylesheet" href="../assets/css/ihealth.style.min.css">
@@ -31,7 +31,7 @@
                                 <i class="icofont-heart-beat secondary-color" style="font-size: 90px;"></i>
                             </div>
                             <div class="mb-5">
-                                <h2 class="color-900 text-center">I-Health, We aim to make your life better</h2>
+                                <h2 class="color-900 text-center">Safety - Digital Health Care Service, We aim to make your life better</h2>
                             </div>
                             <!-- Image block -->
                             <div class="">
@@ -43,39 +43,34 @@
                     <div class="col-lg-6 d-flex justify-content-center align-items-center border-0 rounded-lg auth-h100">
                         <div class="w-100 p-3 p-md-5 card border-0 bg-dark text-light" style="max-width: 32rem;">
                             <!-- Form -->
-                            <form class="row g-1 p-3 p-md-4">
+                            <form class="row g-1 p-3 p-md-4" action="/admin/registration" method="post">
                                 <div class="col-12 text-center mb-5">
                                     <h1>Create your account</h1>
                                     <span>Free access to our dashboard.</span>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-12">
                                     <div class="mb-2">
-                                        <label class="form-label">Full name</label>
-                                        <input type="email" class="form-control form-control-lg" placeholder="John">
+                                        <label class="form-label">Hospital name</label>
+                                        <input type="text" name="hospitalName" class="form-control form-control-lg" placeholder="Hospital name">
                                     </div>
                                 </div>
-                                <div class="col-6">
+
+                                <div class="col-12">
                                     <div class="mb-2">
-                                        <label class="form-label">&nbsp;</label>
-                                        <input type="email" class="form-control form-control-lg" placeholder="Parker">
+                                        <label class="form-label">Email address</label>
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="name@example.com">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-2">
-                                        <label class="form-label">Email address</label>
-                                        <input type="email" class="form-control form-control-lg" placeholder="name@example.com">
+                                        <label class="form-label">Hospital Location</label>
+                                        <input type="text" name="address" class="form-control form-control-lg" placeholder="enter hospital location">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-2">
                                         <label class="form-label">Password</label>
-                                        <input type="email" class="form-control form-control-lg" placeholder="8+ characters required">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="mb-2">
-                                        <label class="form-label">Confirm password</label>
-                                        <input type="email" class="form-control form-control-lg" placeholder="8+ characters required">
+                                        <input type="password" name="password" class="form-control form-control-lg" placeholder="8+ characters required">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -87,14 +82,13 @@
                                     </div>
                                 </div>
                                 <div class="col-12 text-center mt-4">
-                                    <a href="auth-signin.html" class="btn btn-lg btn-block btn-light lift text-uppercase" alt="SIGNUP">SIGN UP</a>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <span>Already have an account? <a href="auth-signin.html" title="Sign in" >Sign in here</a></span>
+                                    <button type="submit" class="btn btn-lg btn-block btn-light lift text-uppercase">SIGN UP</button>
                                 </div>
                             </form>
                             <!-- End Form -->
-
+                            <div class="col-12 text-center mt-4">
+                                <span>Already have an account? <a href="/admin/login" title="Sign in" >Sign in here</a></span>
+                            </div>
                         </div>
                     </div>
                 </div> <!-- End Row -->

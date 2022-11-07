@@ -1,5 +1,6 @@
 package com.spring.safety.config;
 
+import com.spring.safety.model.Hospital;
 import com.spring.safety.model.User;
 import com.spring.safety.service.UserService;
 import org.springframework.security.core.GrantedAuthority;

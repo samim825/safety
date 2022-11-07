@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
@@ -22,11 +23,16 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private CustomUserDetailsService userDetailsService;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    private UserDetailsService userDetailsService;
 
+    @Autowired
+    private CustomAuthenticationSuccessHandler customAuthenticationSuccessHandler;
+
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
     public AuthenticationProvider authenticationProvider(){
-
+        System.out.println("AuthemticationProvider method visited");
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(userDetailsService);
         provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
@@ -42,10 +48,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .cors().disable()
                 .authorizeRequests()
+                .antMatchers("/admin/register","/admin/login","/admin/registration").permitAll()
                 .antMatchers("/admin/**").authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/admin/login")
+                    .successHandler(customAuthenticationSuccessHandler)
+                    .loginPage("/admin/login")
+                    .usernameParameter("email")
+                    .loginProcessingUrl("/admin/login")
+                    .defaultSuccessUrl("/admin")
                 .and();
 //                .anyRequest()
 //                .authenticated()

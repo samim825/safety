@@ -4,6 +4,7 @@ package com.spring.safety.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -20,17 +21,16 @@ public class User {
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String id;
 
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
-
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
-
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
     @Column(name = "password")
     private String password;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "hospital_id", referencedColumnName = "id")
+    @ToString.Exclude
+    private Hospital hospital;
 
 
 }
