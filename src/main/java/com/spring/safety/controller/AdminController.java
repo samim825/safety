@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
 
 @Controller
@@ -21,10 +22,14 @@ public class AdminController {
     private UserService userService;
 
    @GetMapping({"/admin", "/admin/"})
-    public String goHomePage(){
+    public ModelAndView goHomePage(HttpSession session, ModelAndView modelAndView){
 
+       User user = (User) session.getAttribute("user");
+       System.out.println(user.toString());
         System.out.println("Admin index page");
-        return "admin/index";
+        modelAndView.addObject("user",user);
+        modelAndView.setViewName("admin/index");
+        return modelAndView;
     }
 
     @GetMapping("/admin/doctorList")
@@ -81,9 +86,12 @@ public class AdminController {
     }
 
     @GetMapping("/admin/about")
-    public String goAboutPage(){
+    public ModelAndView goAboutPage(HttpSession session, ModelAndView modelAndView){
 
-       return "admin/about";
+       modelAndView.addObject("user", session.getAttribute("user"));
+       modelAndView.setViewName("admin/about");
+
+       return modelAndView;
     }
 
 }

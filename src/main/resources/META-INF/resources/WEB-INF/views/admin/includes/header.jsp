@@ -101,7 +101,7 @@
                                     <img class="avatar rounded-circle" src="assets/images/profile_av.png" alt="profile">
                                     <div class="flex-fill ms-3">
                                         <p class="mb-0"><span class="font-weight-bold">John	Quinn</span></p>
-                                        <small class="">Johnquinn@gmail.com</small>
+                                        <small class="">${user.getEmail()}</small>
                                     </div>
                                 </div>
 

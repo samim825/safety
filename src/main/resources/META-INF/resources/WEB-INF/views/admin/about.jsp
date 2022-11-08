@@ -1,3 +1,5 @@
+<%@ page import="com.spring.safety.model.Hospital" %>
+<%@ page import="com.spring.safety.model.User" %>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 
@@ -17,13 +19,17 @@
         <!-- Body: Header -->
         <%@include file="includes/header.jsp"%>
 
+        <%
+            User user = (User) request.getAttribute("user");
+            Hospital hospital = user.getHospital();
+        %>
         <!-- Body: Body -->
         <div class="body d-flex py-3">
             <div class="container-xxl">
                 <div class="row align-items-center">
                     <div class="border-0 mb-4">
                         <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-                            <h3 class="fw-bold mb-0">Hospital</h3>
+                            <h3 class="fw-bold mb-0"><%=hospital.getHospitalName()%></h3>
                         </div>
                     </div>
                 </div> <!-- Row end  -->
@@ -37,32 +43,33 @@
                                 <form action="/admin/update" method="post">
                                     <div class="row g-3 align-items-center">
                                         <div class="col-md-6">
+                                            <input type="hidden" name="id" value="<%=hospital.getId()%>">
                                             <label for="hospitalName" class="form-label">Hospital Name</label>
-                                            <input type="text" name="hospitalName" class="form-control" id="hospitalName" required>
+                                            <input type="text" name="hospitalName" value="<%=hospital.getHospitalName()%>" class="form-control" id="hospitalName" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="tagLine" class="form-label">Tag Line</label>
-                                            <input type="text" name="tagLine" class="form-control" id="tagLine" required>
+                                            <input type="text" name="tagline" value="<%=hospital.getTagline()%>" class="form-control" id="tagLine" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="phonenumber" class="form-label">Phone Number</label>
-                                            <input type="text" name="phoneNumber" class="form-control" id="phonenumber" required>
+                                            <input type="text" name="phoneNumber" value="<%=hospital.getPhoneNumber()%>" class="form-control" id="phonenumber" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="duplicatePhoneNumber" class="form-label">Additional Phone Number</label>
-                                            <input type="text" name="duplicatePhoneNumber" class="form-control" id="duplicatePhoneNumber" required>
+                                            <input type="text" name="duplicatePhoneNumber" value="<%=hospital.getDuplicatePhoneNumber()%>" class="form-control" id="duplicatePhoneNumber" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="emailaddress" class="form-label">Email Address</label>
-                                            <input type="email" name="email" class="form-control" id="emailaddress" required>
+                                            <input type="email" name="email" value="<%=user.getEmail()%>" class="form-control" id="emailaddress" readonly>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="emailaddress" class="form-label">Additional Email Address</label>
-                                            <input type="email" name="duplicateEmail" class="form-control" id="duplicateEmail" required>
+                                            <input type="email" name="duplicateEmail" value="<%=hospital.getDuplicateEmail()%>" class="form-control" id="duplicateEmail" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="address" class="form-label">Location</label>
-                                            <input type="text" name="address" class="form-control" id="address" required>
+                                            <input type="text" name="address" value="<%=hospital.getAddress()%>" class="form-control" id="address" required>
                                         </div>
 <%--                                        <div class="col-md-6">--%>
 <%--                                            <label for="admitdate" class="form-label">Join Date</label>--%>
@@ -236,5 +243,4 @@
 
 </body>
 
-<!-- Mirrored from www.pixelwibes.com/template/ihealth/html/dist/doctor-add.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Sep 2022 13:13:53 GMT -->
 </html>

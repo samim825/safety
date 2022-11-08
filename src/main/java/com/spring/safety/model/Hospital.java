@@ -7,6 +7,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -34,5 +35,9 @@ public class Hospital {
     @OneToOne(mappedBy = "hospital")
     @ToString.Exclude
     private User user;
+
+    @OneToMany(mappedBy = "hospitalId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ToString.Exclude
+    private List<Department> departmentList;
 
 }

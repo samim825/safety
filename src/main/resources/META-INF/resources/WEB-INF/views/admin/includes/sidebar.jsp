@@ -1,10 +1,10 @@
 <div class="sidebar px-4 py-4 py-md-5 me-0">
     <div class="d-flex flex-column h-100">
-        <a href="index.html" class="mb-0 brand-icon">
+        <a href="/admin" class="mb-0 brand-icon">
                 <span class="logo-icon">
                     <i class="icofont-heart-beat fs-2"></i>
                 </span>
-            <span class="logo-text">I-Health</span>
+            <span class="logo-text">Safety</span>
         </a>
         <!-- Menu: main ul -->
 
@@ -40,7 +40,10 @@
             </li>
             <li><a class="m-link" href="accidents.html"><i class="icofont-stretcher fs-5"></i> <span>Accidents</span></a></li>
             <li><a class="m-link" href="labs.html"><i class="icofont-blood-test fs-5"></i> <span>Labs</span></a></li>
-            <li><a class="m-link" href="department.html"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
+
+
+
+            <li><a class="m-link" href="/admin/departmentList"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
             <li class="collapsed">
                 <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Componentsone" href="#"><i
                         class="icofont-ui-calculator"></i> <span>Accounts</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>

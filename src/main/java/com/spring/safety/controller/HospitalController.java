@@ -2,7 +2,9 @@ package com.spring.safety.controller;
 
 
 import com.spring.safety.model.Hospital;
+import com.spring.safety.model.User;
 import com.spring.safety.service.HospitalService;
+import com.spring.safety.service.UserService;
 import com.spring.safety.service.impl.HospitalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,13 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.jws.WebParam;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/admin/")
 public class HospitalController {
 
     @Autowired
-    private HospitalServiceImpl hospitalService;
+    private UserService userService;
+    @Autowired
+    private HospitalService hospitalService;
 
     @PostMapping
     public ModelAndView saveHospital(Hospital hospital){
@@ -35,12 +40,13 @@ public class HospitalController {
     }
 
     @PostMapping("/update")
-    public ModelAndView updateHospital(@ModelAttribute Hospital hospital){
+    public String updateHospital(@ModelAttribute Hospital hospital, HttpSession session){
 
+        User user = (User) session.getAttribute("user");
+        user.setHospital(hospital);
         System.out.println(hospital.toString());
-        ModelAndView modelAndView = new ModelAndView();
-//        hospitalService.update(hospital);
-        return modelAndView;
+        userService.save(user);
+        return "redirect:/admin/about";
     }
 
     @GetMapping("/allHospitals")

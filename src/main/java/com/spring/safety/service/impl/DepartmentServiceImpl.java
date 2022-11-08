@@ -1,6 +1,7 @@
 package com.spring.safety.service.impl;
 
 import com.spring.safety.model.Department;
+import com.spring.safety.model.Hospital;
 import com.spring.safety.repository.DepartmentRepository;
 import com.spring.safety.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,12 +31,17 @@ public class DepartmentServiceImpl implements DepartmentService {
     }
 
     @Override
+    public List<Department> findDepartmentByHospital(Hospital hospital) {
+        return departmentRepository.findDepartmentByHospitalId(hospital);
+    }
+
+    @Override
     public List<Department> findAllDepartments() {
         return departmentRepository.findAll();
     }
 
     @Override
     public void delete(String id) {
-        departmentRepository.deleteById(id);
+        departmentRepository.deletePostById(id);
     }
 }
