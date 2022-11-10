@@ -1,10 +1,14 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-<!--      <a href="index.html" class="logo me-auto"><img src="assets/img/safety.png" alt=""></a>-->
-<!--          <a href="index.html" class="logo me-auto"> Safety <sub>Digital Health Care</sub></a>-->
 <div class="logo me-auto">
-    <p>Hospital Name<sub style="font-size: 12px"> Tag Line</sub></p>
+    <p><%=hospital.getHospitalName()%>
+      <sub style="font-size: 12px">
+        <% if(hospital.getTagline()=="NULL" || hospital.getTagline()==null){
+          out.print("");
+        }else {
+          out.print(hospital.getTagline());
+        }%></sub></p>
 
 </div>
 <!--          <sub>Digital Health Care</sub>-->

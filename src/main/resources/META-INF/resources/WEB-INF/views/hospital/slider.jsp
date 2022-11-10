@@ -13,11 +13,12 @@
             <a href="#about" class="btn-get-started scrollto">Read More</a>
           </div>
         </div>
+        </div>
 
         <!-- Slide 2 -->
         <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
           <div class="container">
-            <h2>Welcome to <span>Safety</span></h2>
+            <h2>Welcome to <span><%=hospital.getHospitalName()%></span></h2>
             <p>A Digital Health Care Service Through the country</p>
             <a href="#about" class="btn-get-started scrollto">Read More</a>
           </div>
@@ -26,7 +27,7 @@
         <!-- Slide 3 -->
         <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
           <div class="container">
-            <h2>Welcome to <span>Safety</span></h2>
+            <h2>Welcome to <span><%=hospital.getHospitalName()%></span></h2>
             <p>A Digital Health Care Service Through the country</p>
             <a href="#about" class="btn-get-started scrollto">Read More</a>
           </div>

@@ -1,3 +1,4 @@
+<%@ page import="com.spring.safety.model.Hospital" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +52,10 @@
     </div>
   </div>-->
 
+  <%
+    Hospital hospital = (Hospital) request.getAttribute("hospital");
+  %>
+
   <!-- ======= Header ======= -->
   <%@include file="hospital/header.jsp" %>
 
@@ -69,13 +74,7 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="fas fa-heartbeat"></i></div>
               <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <%
-                out.print( request.getRemoteAddr() );
-              %>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-              <%
-                out.print( request.getRemoteHost() );
-              %>
             </div>
           </div>
 
