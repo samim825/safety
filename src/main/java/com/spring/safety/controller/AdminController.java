@@ -1,7 +1,9 @@
 package com.spring.safety.controller;
 
+import com.spring.safety.model.Department;
 import com.spring.safety.model.Hospital;
 import com.spring.safety.model.User;
+import com.spring.safety.service.DepartmentService;
 import com.spring.safety.service.HospitalService;
 import com.spring.safety.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
+import java.util.List;
 
 @Controller
 public class AdminController {
@@ -20,6 +23,9 @@ public class AdminController {
     private HospitalService hospitalService;
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private DepartmentService departmentService;
 
    @GetMapping({"/admin", "/admin/"})
     public ModelAndView goHomePage(HttpSession session, ModelAndView modelAndView){
@@ -40,8 +46,13 @@ public class AdminController {
     }
 
     @GetMapping("/admin/addDoctor")
-    public String addDoctorPage(){
-        return "admin/doctor-add";
+    public ModelAndView addDoctorPage(ModelAndView modelAndView, HttpSession session){
+
+        User user = (User) session.getAttribute("user");
+        List<Department> departments = departmentService.findDepartmentByHospital(user.getHospital());
+        modelAndView.addObject("departments",departments);
+        modelAndView.setViewName("admin/doctor-add");
+        return modelAndView;
     }
 
 

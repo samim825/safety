@@ -1,4 +1,5 @@
-
+<%@ page import="com.spring.safety.model.Department" %>
+<%@ page import="java.util.List" %>
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
 
@@ -32,19 +33,27 @@
                     <div class="col-sm-12">
                         <div class="card mb-3">
                             <div class="card-header py-3 d-flex justify-content-between bg-transparent border-bottom-0">
-                                <h6 class="mb-0 fw-bold ">Hospital Basic Inforamtion</h6>
+                                <h6 class="mb-0 fw-bold ">Basic Inforamtion of a Doctor</h6>
                             </div>
                             <div class="card-body">
                                 <form action="/admin/update" method="post">
                                     <div class="row g-3 align-items-center">
                                         <div class="col-md-6">
                                             <input type="hidden" name="id" value="hospital.getId()%>">
-                                            <label for="hospitalName" class="form-label">Hospital Name</label>
+                                            <label for="hospitalName" class="form-label">Name</label>
                                             <input type="text" name="hospitalName" class="form-control" id="hospitalName" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="tagLine" class="form-label">Tag Line</label>
-                                            <input type="text" name="tagline"  class="form-control" id="tagLine" required>
+                                            <label class="form-label">Doctor Payment Option</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected="">--Add Department--</option>
+                                                <%
+                                                    List<Department> departments = (List<Department>) request.getAttribute("departments");
+                                                    for (Department department: departments){
+                                                %>
+                                                <option value="1"><%=department.getName()%></option>
+                                                <% } %>
+                                            </select>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="phonenumber" class="form-label">Phone Number</label>
