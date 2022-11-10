@@ -56,28 +56,25 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="phonenumber" class="form-label">Phone Number</label>
-                                            <input type="text" name="phoneNumber" class="form-control" id="phonenumber" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="duplicatePhoneNumber" class="form-label">Additional Phone Number</label>
-                                            <input type="text" name="duplicatePhoneNumber" class="form-control" id="duplicatePhoneNumber" required>
+                                            <label for="details" class="form-label">Details</label>
+                                            <input type="text" name="details" class="form-control" id="details" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="emailaddress" class="form-label">Email Address</label>
                                             <input type="email" name="email" class="form-control" id="emailaddress" required>
                                         </div>
+
                                         <div class="col-md-6">
-                                            <label for="emailaddress" class="form-label">Additional Email Address</label>
-                                            <input type="email" name="duplicateEmail" class="form-control" id="duplicateEmail" required>
+                                            <label for="address" class="form-label">Available Time</label>
+                                            <input type="text" name="address" class="form-control" id="address" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="address" class="form-label">Location</label>
-                                            <input type="text" name="address" class="form-control" id="address" required>
+                                            <label for="offDay" class="form-label">Off Day</label>
+                                            <input type="text" name="offDay" class="form-control" id="offDay" required>
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary mt-4">Update</button>
+                                    <button type="submit" class="btn btn-primary mt-4">Save</button>
                                 </form>
                             </div>
                         </div>
