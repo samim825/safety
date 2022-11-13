@@ -8,14 +8,14 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+            <img src="assets/img/departments-1.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Safety -  Digital Health Care Service.</h3>
+            <h3>Safety -  Digital Health Care Service.</h3><br>
             <h3></h3>
             <p class="fst-italic">
               All over the world, to make health care service more efficient for any one this platform will help you.
-            </p><p></p>
+            </p><br>
             <ul>
               <li><i class="bi bi-check-circle"></i> You can find your nearest hospital.</li>
               <li><i class="bi bi-check-circle"></i> You can find medical test price of different hospitals.</li>
