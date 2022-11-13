@@ -8,7 +8,7 @@
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
           <div class="container">
-            <h2>Welcome to <span>Safety</span></h2>
+              <h2>Welcome to <span><%=hospital.getHospitalName()%></span></h2>
             <p>A Digital Health Care Service Through the country</p>
             <a href="#about" class="btn-get-started scrollto">Read More</a>
           </div>
