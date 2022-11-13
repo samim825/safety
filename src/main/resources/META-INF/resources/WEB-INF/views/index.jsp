@@ -61,37 +61,37 @@
         <div class="container" data-aos="fade-up">
 
             <div class="row">
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon"><i class="fas fa-heartbeat"></i></div>
-                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                        <h4 class="title"><a href="#hospitals">Hospitals</a></h4>
+                        <p class="description">You can find your nearest hospitals from this Safety which is a digital health care service</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon"><i class="fas fa-pills"></i></div>
-                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                        <h4 class="title"><a href="#doctors">Doctors</a></h4>
+                        <p class="description">You can Find different medical specialist from here. You can get appointment of them.</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                     <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon"><i class="fas fa-thermometer"></i></div>
-                        <h4 class="title"><a href="">Magni Dolores</a></h4>
-                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                        <h4 class="title"><a href="#">Medical Test</a></h4>
+                        <p class="description">You can know medical test price of different hospitals. You can also know which test is better in which hospitals.</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                        <div class="icon"><i class="fas fa-dna"></i></div>
-                        <h4 class="title"><a href="">Nemo Enim</a></h4>
-                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                    </div>
-                </div>
+<%--                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">--%>
+<%--                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">--%>
+<%--                        <div class="icon"><i class="fas fa-dna"></i></div>--%>
+<%--                        <h4 class="title"><a href="">Department</a></h4>--%>
+<%--                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
             </div>
 
         </div>
@@ -103,7 +103,7 @@
 
             <div class="text-center">
                 <h3>In an emergency? Need help now?</h3>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> If you are in an emergency , you can get immediately appointment of a doctor. </p>
                 <a class="cta-btn scrollto" href="#appointment">Make an Make an Appointment</a>
             </div>
 
@@ -344,6 +344,35 @@
                 .draw();
 
         } );
+
+
+
+        $('#send').click(function (){
+            console.log("clickd");
+            var name = document.getElementById("name1").value;
+            var email = document.getElementById("email1").value;
+            var subject = document.getElementById("subject").value;
+            var text = document.getElementById("message").value;
+
+            let message = {"name" : name, "email" : email, "subject" : subject, "message" : text};
+            console.log(message);
+
+            $.ajax({
+                url:"/sendMessage",
+                method : "POST",
+                data: JSON.stringify(message),
+                contentType : 'application/json',
+                dataType : "json",
+                success: function (msg){
+                    document.getElementById("send-message").innerHTML = "Your message has been sent. Thank you!";
+                },
+                error : function (msg){
+                    document.getElementById("error-message").innerHTML = "Your message has been sent. Thank you!";
+                }
+            });
+        });
+
+
     });
 </script>
 

@@ -5,6 +5,8 @@ import com.spring.safety.service.MessageService;
 import com.spring.safety.service.impl.MessageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -14,8 +16,19 @@ public class MessageController {
     @Autowired
     private MessageServiceImpl messageService;
 
-    public Message saveMessage(Message message){
-        return messageService.save(message);
+    @ResponseBody
+    @PostMapping("/sendMessage")
+    public String saveMessage(@RequestBody Message message, ModelAndView modelAndView){
+        System.out.println(message.toString());
+        String msg = "";
+        try{
+            messageService.save(message);
+            msg = "Your message has been sent. Thank you!";
+        }catch (Exception exception){
+            msg = "sorry, something went wrong!";
+            exception.printStackTrace();
+        }
+        return msg;
     }
 
     public Message updateMessage(Message message){

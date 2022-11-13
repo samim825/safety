@@ -45,31 +45,40 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" id="name1" placeholder="Your Name" required="">
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" id="email1" placeholder="Your Email" required="">
                 </div>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="7" placeholder="Message" required=""></textarea>
+                <textarea class="form-control" name="message" id="message" rows="7" placeholder="Message" required=""></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+<%--                <div class="loading">Loading</div>--%>
+                <div style="background-color: #3fbbc0; color: white" class="error-message" id="error-message"></div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="button" name="submit" id="send">Send Message</button></div>
             </form>
+              <div style="background-color: #3fbbc0; color: white" class="sent-message" id="sent-message"></div>
+
           </div>
 
         </div>
 
       </div>
     </section>
+
+<%--<script>--%>
+
+<%--    $(document).ready(function (){--%>
+
+<%--        --%>
+<%--    });--%>
+<%--</script>--%>
