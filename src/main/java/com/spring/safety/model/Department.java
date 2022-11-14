@@ -9,6 +9,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.ManyToAny;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -30,5 +31,7 @@ public class Department {
     @JoinColumn(name = "hospital_id", referencedColumnName = "id")
     @ToString.Exclude
     private Hospital hospitalId;
+
+
 
 }

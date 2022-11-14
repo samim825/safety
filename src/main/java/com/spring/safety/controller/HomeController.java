@@ -4,6 +4,8 @@ package com.spring.safety.controller;
 import com.spring.safety.model.Hospital;
 import com.spring.safety.model.User;
 import com.spring.safety.repository.UserRepository;
+import com.spring.safety.service.DepartmentService;
+import com.spring.safety.service.DoctorService;
 import com.spring.safety.service.HospitalService;
 import com.spring.safety.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -25,10 +27,14 @@ public class HomeController {
     @Autowired
     private final HospitalService hospitalService;
 
+    @Autowired
+    private DoctorService doctorService;
+
     @GetMapping("/")
     public ModelAndView goHome(ModelAndView modelAndView){
         List<Hospital> hospitals = hospitalService.getAllHospitals();
         modelAndView.addObject("hospitals", hospitals);
+        modelAndView.addObject("doctors", doctorService.findAllDoctors());
         modelAndView.setViewName("index");
         return modelAndView;
     }
@@ -52,6 +58,8 @@ public class HomeController {
         Hospital hospital = hospitalService.findById(id);
         modelAndView.addObject("hospitalEmail",hospital.getUser().getEmail());
         modelAndView.addObject("hospital", hospital);
+        modelAndView.addObject("doctors", doctorService.findAllDoctorsByHospital(id));
+
         modelAndView.setViewName("single-hospital");
         return modelAndView;
     }

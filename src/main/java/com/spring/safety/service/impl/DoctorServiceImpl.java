@@ -35,6 +35,11 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
+    public List<Doctor> findAllDoctorsByHospital(String id) {
+        return doctorRepository.findDoctorByHospitalId(id);
+    }
+
+    @Override
     public void delete(String id) {
 
     }

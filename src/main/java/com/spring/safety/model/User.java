@@ -8,6 +8,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -31,6 +32,7 @@ public class User {
     @JoinColumn(name = "hospital_id", referencedColumnName = "id")
     @ToString.Exclude
     private Hospital hospital;
+
 
 
 }

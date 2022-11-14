@@ -47,7 +47,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Please Subscribe if you want to know latest notifications</p>
-            <form action="" method="post">
+            <form>
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
 

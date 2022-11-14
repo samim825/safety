@@ -136,7 +136,7 @@
                     <div class="count-box">
                         <i class="far fa-hospital"></i>
                         <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1" class="purecounter"></span>
-                        <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>
+                        <p><strong>Hospitals</strong> adipisci atque cum quia aut numquam delectus</p>
                         <a href="#">Find out more &raquo;</a>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                     <div class="count-box">
                         <i class="fas fa-flask"></i>
                         <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-                        <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>
+                        <p><strong>Medical Test</strong> aut commodi quaerat. Aliquam ratione</p>
                         <a href="#">Find out more &raquo;</a>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="count-box">
                         <i class="fas fa-award"></i>
                         <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-                        <p><strong>Awards</strong> rerum asperiores dolor molestiae doloribu</p>
+                        <p><strong>Departments</strong> rerum asperiores dolor molestiae doloribu</p>
                         <a href="#">Find out more &raquo;</a>
                     </div>
                 </div>
@@ -165,40 +165,40 @@
     </section><!-- End Counts Section -->
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
+<%--    <section id="features" class="features">--%>
+<%--        <div class="container" data-aos="fade-up">--%>
 
-            <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
-                    <div class="icon-box mt-5 mt-lg-0">
-                        <i class="bx bx-receipt"></i>
-                        <h4>Est labore ad</h4>
-                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                    </div>
-                    <div class="icon-box mt-5">
-                        <i class="bx bx-cube-alt"></i>
-                        <h4>Harum esse qui</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                    <div class="icon-box mt-5">
-                        <i class="bx bx-images"></i>
-                        <h4>Aut occaecati</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                    </div>
-                    <div class="icon-box mt-5">
-                        <i class="bx bx-shield"></i>
-                        <h4>Beatae veritatis</h4>
-                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-                    </div>
-                </div>
-                <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");' data-aos="zoom-in"></div>
-            </div>
+<%--            <div class="row">--%>
+<%--                <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">--%>
+<%--                    <div class="icon-box mt-5 mt-lg-0">--%>
+<%--                        <i class="bx bx-receipt"></i>--%>
+<%--                        <h4>Est labore ad</h4>--%>
+<%--                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>--%>
+<%--                    </div>--%>
+<%--                    <div class="icon-box mt-5">--%>
+<%--                        <i class="bx bx-cube-alt"></i>--%>
+<%--                        <h4>Harum esse qui</h4>--%>
+<%--                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>--%>
+<%--                    </div>--%>
+<%--                    <div class="icon-box mt-5">--%>
+<%--                        <i class="bx bx-images"></i>--%>
+<%--                        <h4>Aut occaecati</h4>--%>
+<%--                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>--%>
+<%--                    </div>--%>
+<%--                    <div class="icon-box mt-5">--%>
+<%--                        <i class="bx bx-shield"></i>--%>
+<%--                        <h4>Beatae veritatis</h4>--%>
+<%--                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");' data-aos="zoom-in"></div>--%>
+<%--            </div>--%>
 
-        </div>
-    </section><!-- End Features Section -->
+<%--        </div>--%>
+<%--    </section><!-- End Features Section -->--%>
 
     <!-- ======= Services Section ======= -->
-    <%@include file="public/services.jsp" %>
+<%--    <%@include file="public/services.jsp" %>--%>
     <!-- End Services Section -->
 
     <!-- ======= Hospital Section ======= -->
@@ -211,7 +211,7 @@
     <!-- End Appointment Section -->
 
     <!-- ======= Departments Section ======= -->
-    <%@include file="public/departments.jsp" %>
+<%--    <%@include file="public/departments.jsp" %>--%>
     <!-- End Departments Section -->
 
     <!-- ======= Testimonials Section ======= -->
@@ -344,6 +344,24 @@
                 .draw();
 
         } );
+
+        $('#myProjectTable1')
+            .addClass( 'nowrap' )
+            .dataTable( {
+                responsive: true,
+                columnDefs: [
+                    { targets: [-1, -3], className: 'dt-body-right' }
+                ]
+            });
+        // $('.deleterow').on('click',function(){
+        //     var tablename = $(this).closest('table').DataTable();
+        //     tablename
+        //         .row( $(this)
+        //             .parents('tr') )
+        //         .remove()
+        //         .draw();
+        //
+        // } );
 
 
 

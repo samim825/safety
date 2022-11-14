@@ -1,8 +1,10 @@
 package com.spring.safety.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -18,23 +20,32 @@ public class Doctor {
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
     private String id;
 
-    private String firstName;
-
-    private String lastName;
-
-    private String phoneNumber;
+    private String Name;
 
     private String email;
 
-    private String imagePath;
+    private String details;
 
-    @Enumerated(EnumType.STRING)
-    private GenderType gender;
+    private String availableTime;
 
-    private String facebookLink;
+    private String offDay;
 
-    private String instagramLink;
+    private String departmentId;
 
-    private String linkedInLink;
+    private String departmentName;
+
+    private String hospitalId;
+
+    private String hospitalName;
+//    private String imagePath;
+
+//    @Enumerated(EnumType.STRING)
+//    private GenderType gender;
+//
+//    private String facebookLink;
+//
+//    private String instagramLink;
+//
+//    private String linkedInLink;
 
 }

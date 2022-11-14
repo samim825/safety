@@ -6,7 +6,10 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Hospital Name- Tag Line</title>
+  <%
+    Hospital hospital = (Hospital) request.getAttribute("hospital");
+  %>
+  <title><%=hospital.getHospitalName()%></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,15 +30,22 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <%--    <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">--%>
+  <%--    <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css">--%>
+
+  <%--    <meta http-equiv="X-UA-Compatible" content="IE=Edge">--%>
+  <%--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">--%>
+  <%--    <title>:: Safety::  Dashboard </title>--%>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+  <!-- plugin css file  -->
+  <link rel="stylesheet" href="assets/plugin/datatables/responsive.dataTables.min.css">
+  <link rel="stylesheet" href="assets/plugin/datatables/dataTables.bootstrap5.min.css">
+  <!-- project css file  -->
+  <link rel="stylesheet" href="assets/css/ihealth.style.min.css">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Medicio - v4.9.1
-  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -52,9 +62,6 @@
     </div>
   </div>-->
 
-  <%
-    Hospital hospital = (Hospital) request.getAttribute("hospital");
-  %>
 
   <!-- ======= Header ======= -->
   <%@include file="hospital/header.jsp" %>
@@ -256,15 +263,149 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <%--<script src="assets/bundles/dataTables.bundle.js"></script>--%>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script src="assets/bundles/libscripts.bundle.js"></script>
+
+
+
+
+
+  <!-- Jquery Core Js -->
+  <script src="assets/bundles/libscripts.bundle.js"></script>
+
+  <!-- Plugin Js-->
+  <script src="assets/bundles/dataTables.bundle.js"></script>
+
+  <!-- Jquery Page Js -->
+  <script src="../js/template.js"></script>
+
+  <script>
+
+
+    $(document).ready(function () {
+
+      $('.deptId').click(function () {
+        let id = $(this).attr('data-bs-id');
+        console.log("Delete data with id : ", id);
+        document.getElementById("dept-delete").setAttribute("value",id);
+      });
+      $('#dept-delete').click(function (){
+        let id = $(this).attr("value");
+        $.ajax({
+          url: '/admin/department/delete/'+id,
+          method: 'DELETE',
+          contentType: 'application/json',
+          success: function(html) {
+            location.reload();
+            // handle success
+          },
+          error: function(request,msg,error) {
+            // handle failure
+          }
+        });
+      });
+
+      $('.edit').click(function (){
+        let id = $(this).attr('data-id');
+        console.log("Edit data with id : ",id);
+        $.ajax({
+          url: '/admin/department/'+id,
+          method: 'GET',
+          contentType: 'application/json',
+          success: function(department) {
+            console.log( "dept : "+department);
+
+            // handle success
+            document.getElementById("edit-id").setAttribute("value",department.id);
+            document.getElementById("name").setAttribute("value",department.name);
+            document.getElementById("headName").value = department.headName;
+          },
+          error: function(request,msg,error) {
+            console.log("error edit")
+            // handle failure
+          }
+        });
+      });
+
+      // project data table
+
+      $('#myProjectTable2')
+              .addClass( 'nowrap' )
+              .dataTable( {
+                responsive: true,
+                columnDefs: [
+                  { targets: [-1, -3], className: 'dt-body-right' }
+                ]
+              });
+      $('.deleterow').on('click',function(){
+        var tablename = $(this).closest('table').DataTable();
+        tablename
+                .row( $(this)
+                        .parents('tr') )
+                .remove()
+                .draw();
+
+      } );
+
+      $('#myProjectTable1')
+              .addClass( 'nowrap' )
+              .dataTable( {
+                responsive: true,
+                columnDefs: [
+                  { targets: [-1, -3], className: 'dt-body-right' }
+                ]
+              });
+      // $('.deleterow').on('click',function(){
+      //     var tablename = $(this).closest('table').DataTable();
+      //     tablename
+      //         .row( $(this)
+      //             .parents('tr') )
+      //         .remove()
+      //         .draw();
+      //
+      // } );
+
+
+
+      $('#send').click(function (){
+        console.log("clickd");
+        var name = document.getElementById("name1").value;
+        var email = document.getElementById("email1").value;
+        var subject = document.getElementById("subject").value;
+        var text = document.getElementById("message").value;
+
+        let message = {"name" : name, "email" : email, "subject" : subject, "message" : text};
+        console.log(message);
+
+        $.ajax({
+          url:"/sendMessage",
+          method : "POST",
+          data: JSON.stringify(message),
+          contentType : 'application/json',
+          dataType : "json",
+          success: function (msg){
+            document.getElementById("send-message").innerHTML = "Your message has been sent. Thank you!";
+          },
+          error : function (msg){
+            document.getElementById("error-message").innerHTML = "Your message has been sent. Thank you!";
+          }
+        });
+      });
+
+
+    });
+  </script>
+
 
 </body>
 

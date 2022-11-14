@@ -31,6 +31,7 @@ public class AdminController {
     public ModelAndView goHomePage(HttpSession session, ModelAndView modelAndView){
 
        User user = (User) session.getAttribute("user");
+
        System.out.println(user.toString());
         System.out.println("Admin index page");
         modelAndView.addObject("user",user);
@@ -38,12 +39,7 @@ public class AdminController {
         return modelAndView;
     }
 
-    @GetMapping("/admin/doctorList")
-    public String goDoctorListPage(){
 
-
-        return "admin/doctor-all";
-    }
 
     @GetMapping("/admin/addDoctor")
     public ModelAndView addDoctorPage(ModelAndView modelAndView, HttpSession session){

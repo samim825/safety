@@ -16,5 +16,7 @@ public interface DoctorService {
 
     List<Doctor> findAllDoctors();
 
+    List<Doctor> findAllDoctorsByHospital(String id);
+
     void delete(String id);
 }
