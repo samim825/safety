@@ -3,6 +3,7 @@ package com.spring.safety.service;
 import com.spring.safety.model.Hospital;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface HospitalService {
 
@@ -10,7 +11,7 @@ public interface HospitalService {
 
     Hospital update(Hospital hospital);
 
-    Hospital findById(String id);
+    Optional<Hospital> findById(String id);
 
     void delete(String id);
 

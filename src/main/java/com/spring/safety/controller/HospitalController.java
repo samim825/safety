@@ -5,7 +5,6 @@ import com.spring.safety.model.Hospital;
 import com.spring.safety.model.User;
 import com.spring.safety.service.HospitalService;
 import com.spring.safety.service.UserService;
-import com.spring.safety.service.impl.HospitalServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/admin/")
@@ -35,7 +34,7 @@ public class HospitalController {
     }
 
     @GetMapping
-    public Hospital findHospitalById(String id){
+    public Optional<Hospital> findHospitalById(String id){
         return hospitalService.findById(id);
     }
 

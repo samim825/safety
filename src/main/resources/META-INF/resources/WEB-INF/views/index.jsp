@@ -116,87 +116,6 @@
 
     <!-- End About Us Section -->
 
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-        <div class="container" data-aos="fade-up">
-
-            <div class="row no-gutters">
-
-                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div class="count-box">
-                        <i class="fas fa-user-md"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
-
-                        <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>
-                        <a href="#">Find out more &raquo;</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div class="count-box">
-                        <i class="far fa-hospital"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1" class="purecounter"></span>
-                        <p><strong>Hospitals</strong> adipisci atque cum quia aut numquam delectus</p>
-                        <a href="#">Find out more &raquo;</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div class="count-box">
-                        <i class="fas fa-flask"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-                        <p><strong>Medical Test</strong> aut commodi quaerat. Aliquam ratione</p>
-                        <a href="#">Find out more &raquo;</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-                    <div class="count-box">
-                        <i class="fas fa-award"></i>
-                        <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-                        <p><strong>Departments</strong> rerum asperiores dolor molestiae doloribu</p>
-                        <a href="#">Find out more &raquo;</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Features Section ======= -->
-<%--    <section id="features" class="features">--%>
-<%--        <div class="container" data-aos="fade-up">--%>
-
-<%--            <div class="row">--%>
-<%--                <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">--%>
-<%--                    <div class="icon-box mt-5 mt-lg-0">--%>
-<%--                        <i class="bx bx-receipt"></i>--%>
-<%--                        <h4>Est labore ad</h4>--%>
-<%--                        <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>--%>
-<%--                    </div>--%>
-<%--                    <div class="icon-box mt-5">--%>
-<%--                        <i class="bx bx-cube-alt"></i>--%>
-<%--                        <h4>Harum esse qui</h4>--%>
-<%--                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>--%>
-<%--                    </div>--%>
-<%--                    <div class="icon-box mt-5">--%>
-<%--                        <i class="bx bx-images"></i>--%>
-<%--                        <h4>Aut occaecati</h4>--%>
-<%--                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>--%>
-<%--                    </div>--%>
-<%--                    <div class="icon-box mt-5">--%>
-<%--                        <i class="bx bx-shield"></i>--%>
-<%--                        <h4>Beatae veritatis</h4>--%>
-<%--                        <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--                <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");' data-aos="zoom-in"></div>--%>
-<%--            </div>--%>
-
-<%--        </div>--%>
-<%--    </section><!-- End Features Section -->--%>
-
     <!-- ======= Services Section ======= -->
 <%--    <%@include file="public/services.jsp" %>--%>
     <!-- End Services Section -->
@@ -223,15 +142,15 @@
     <!-- End Doctors Section -->
 
     <!-- ======= Gallery Section ======= -->
-    <%@include file="public/gallery.jsp" %>
+<%--    <%@include file="public/gallery.jsp" %>--%>
     <!-- End Gallery Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <%@include file="public/pricing.jsp" %>
+<%--    <%@include file="public/pricing.jsp" %>--%>
     <!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questioins Section ======= -->
-    <%@include file="public/asked-questions.jsp" %>
+<%--    <%@include file="public/asked-questions.jsp" %>--%>
     <!-- End Frequently Asked Questioins Section -->
 
     <!-- ======= Contact Section ======= -->
@@ -244,11 +163,8 @@
 
 <%@include file="public/footer.jsp" %>
 <!-- End Footer -->
-
 <div id="preloader"></div>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
 
 <!-- Vendor JS Files -->
 <%--<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>--%>
@@ -261,14 +177,7 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
-
-
 <script src="assets/bundles/libscripts.bundle.js"></script>
-
-
-
-
-
 <!-- Jquery Core Js -->
 <script src="assets/bundles/libscripts.bundle.js"></script>
 
@@ -282,51 +191,7 @@
 
     $(document).ready(function () {
 
-        $('.deptId').click(function () {
-            let id = $(this).attr('data-bs-id');
-            console.log("Delete data with id : ", id);
-            document.getElementById("dept-delete").setAttribute("value",id);
-        });
-        $('#dept-delete').click(function (){
-            let id = $(this).attr("value");
-            $.ajax({
-                url: '/admin/department/delete/'+id,
-                method: 'DELETE',
-                contentType: 'application/json',
-                success: function(html) {
-                    location.reload();
-                    // handle success
-                },
-                error: function(request,msg,error) {
-                    // handle failure
-                }
-            });
-        });
-
-        $('.edit').click(function (){
-            let id = $(this).attr('data-id');
-            console.log("Edit data with id : ",id);
-            $.ajax({
-                url: '/admin/department/'+id,
-                method: 'GET',
-                contentType: 'application/json',
-                success: function(department) {
-                    console.log( "dept : "+department);
-
-                    // handle success
-                    document.getElementById("edit-id").setAttribute("value",department.id);
-                    document.getElementById("name").setAttribute("value",department.name);
-                    document.getElementById("headName").value = department.headName;
-                },
-                error: function(request,msg,error) {
-                    console.log("error edit")
-                    // handle failure
-                }
-            });
-        });
-
         // project data table
-
         $('#myProjectTable')
             .addClass( 'nowrap' )
             .dataTable( {
@@ -335,15 +200,6 @@
                     { targets: [-1, -3], className: 'dt-body-right' }
                 ]
             });
-        $('.deleterow').on('click',function(){
-            var tablename = $(this).closest('table').DataTable();
-            tablename
-                .row( $(this)
-                    .parents('tr') )
-                .remove()
-                .draw();
-
-        } );
 
         $('#myProjectTable1')
             .addClass( 'nowrap' )
@@ -353,17 +209,6 @@
                     { targets: [-1, -3], className: 'dt-body-right' }
                 ]
             });
-        // $('.deleterow').on('click',function(){
-        //     var tablename = $(this).closest('table').DataTable();
-        //     tablename
-        //         .row( $(this)
-        //             .parents('tr') )
-        //         .remove()
-        //         .draw();
-        //
-        // } );
-
-
 
         $('#send').click(function (){
             console.log("clickd");
