@@ -30,7 +30,9 @@
 <%--                    <li><a class="ms-link" href="doctor-schedule.html">Doctor Schedule</a></li>--%>
                 </ul>
             </li>
-<%--            <li class="collapsed">--%>
+            <i class="bi bi-list mobile-nav-toggle">Toggle</i>
+
+        <%--            <li class="collapsed">--%>
 <%--                <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Patient" href="#">--%>
 <%--                    <i class="icofont-blind fs-5"></i> <span>Patient</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>--%>
 <%--                <!-- Menu: Sub menu ul -->--%>

@@ -39,6 +39,12 @@ public class AdminController {
         return modelAndView;
     }
 
+    @GetMapping("/admin/home")
+    public String goSuperAdminHomePage(){
+
+       return "admin/home";
+    }
+
 
 
     @GetMapping("/admin/addDoctor")

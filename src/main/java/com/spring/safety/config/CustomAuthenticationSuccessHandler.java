@@ -33,7 +33,11 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
         HttpSession session = request.getSession();
         session.setAttribute("user",user);
 
-        response.sendRedirect("/admin");
+        if(user.getEmail().equals("admin@gmail.com") && user.getPassword().equals("$2a$10$f1QLQuilt3ZjpL0A86x0weOxF.0HkV5RaSZuKxhdje3dDRSqQW1t.")){
+            response.sendRedirect("/admin/home");
+        }else {
+            response.sendRedirect("/admin");
+        }
 
         if (session != null) {
             String redirectUrl = (String) session.getAttribute("url_prior_login");
