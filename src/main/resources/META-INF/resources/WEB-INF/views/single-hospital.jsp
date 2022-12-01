@@ -237,15 +237,15 @@
     <!-- End Doctors Section -->
 
     <!-- ======= Gallery Section ======= -->
-    <%@include file="hospital/gallery.jsp" %>
+<%--    <%@include file="hospital/gallery.jsp" %>--%>
     <!-- End Gallery Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <%@include file="hospital/pricing.jsp" %>
+<%--    <%@include file="hospital/pricing.jsp" %>--%>
     <!-- End Pricing Section -->
 
     <!-- ======= Frequently Asked Questioins Section ======= -->
-    <%@include file="hospital/asked-questions.jsp" %>
+<%--    <%@include file="hospital/asked-questions.jsp" %>--%>
     <!-- End Frequently Asked Questioins Section -->
 
     <!-- ======= Contact Section ======= -->
