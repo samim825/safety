@@ -28,6 +28,9 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "enabled")
+    private Integer enabled = 0;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "hospital_id", referencedColumnName = "id")
     @ToString.Exclude

@@ -52,31 +52,31 @@
                                 <div class="col-12">
                                     <div class="mb-2">
                                         <label class="form-label">Hospital name</label>
-                                        <input type="text" name="hospitalName" class="form-control form-control-lg" placeholder="Hospital name">
+                                        <input type="text" name="hospitalName" class="form-control form-control-lg" placeholder="Hospital name" required>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
                                     <div class="mb-2">
                                         <label class="form-label">Email address</label>
-                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="name@example.com">
+                                        <input type="email" name="email" class="form-control form-control-lg" placeholder="name@example.com" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-2">
                                         <label class="form-label">Hospital Location</label>
-                                        <input type="text" name="address" class="form-control form-control-lg" placeholder="enter hospital location">
+                                        <input type="text" name="address" class="form-control form-control-lg" placeholder="enter hospital location" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-2">
                                         <label class="form-label">Password</label>
-                                        <input type="password" name="password" class="form-control form-control-lg" placeholder="8+ characters required">
+                                        <input type="password" name="password" class="form-control form-control-lg" placeholder="8+ characters required" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
                                         <label class="form-check-label" for="flexCheckDefault">
                                             I accept the <a href="#" title="Terms and Conditions">Terms and Conditions</a>
                                         </label>

@@ -29,11 +29,11 @@ public class CustomAuthenticationSuccessHandler extends SimpleUrlAuthenticationS
                                         Authentication authentication) throws IOException, ServletException {
         System.out.println("----- Authentication Success-----" + authentication.getName());
 
-        User user = userService.findByEmail(authentication.getName());
+        User user = userService.findActiveUserByEmail(authentication.getName());
         HttpSession session = request.getSession();
         session.setAttribute("user",user);
 
-        if(user.getEmail().equals("admin@gmail.com") && user.getPassword().equals("$2a$10$f1QLQuilt3ZjpL0A86x0weOxF.0HkV5RaSZuKxhdje3dDRSqQW1t.")){
+        if(user.getEmail().equals("admin@gmail.com") && user.getPassword().equals("$2a$10$kCDuzwaZJJqeMzVudZOIYu.mTPA8Il5nlA660cCh9cj4YZJKajsnq")){
             response.sendRedirect("/admin/home");
         }else {
             response.sendRedirect("/admin");
