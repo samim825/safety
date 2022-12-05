@@ -26,8 +26,8 @@
                                 <div><hr class="dropdown-divider border-dark"></div>
                             </div>
                             <div class="list-group m-2 ">
-                                <a href="/admin/about" class="list-group-item list-group-item-action border-0 "><i class="icofont-doctor-alt fs-5"></i>Edit Profiles</a>
-                                <a href="/admin/about" class="list-group-item list-group-item-action border-0 "><i class="icofont-doctor-alt fs-5"></i>View Profiles</a>
+<%--                                <a href="/admin/about" class="list-group-item list-group-item-action border-0 "><i class="icofont-doctor-alt fs-5"></i>Edit Profiles</a>--%>
+<%--                                <a href="/admin/about" class="list-group-item list-group-item-action border-0 "><i class="icofont-doctor-alt fs-5"></i>View Profiles</a>--%>
                                 <a href="/admin/logout" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Signout</a>
                                 <div><hr class="dropdown-divider border-dark"></div>
                                 <%--                                <a href="ui-elements/auth-signup.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-contact-add fs-5 me-3"></i>Add personal account</a>--%>

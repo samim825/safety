@@ -14,20 +14,10 @@
                     <i class="icofont-ui-home fs-5"></i> <span>Dashboard</span> </a>
             </li>
 
-            <li><a class="m-link" href="/admin/departmentList"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>
+<%--            <li><a class="m-link" href="/admin/departmentList"><i class="icofont-hospital fs-5"></i> <span>Department</span></a></li>--%>
             <li><a class="m-link" href="/admin/hospitalList"><i class="icofont-hospital fs-5"></i> <span>Hospital</span></a></li>
+            <li><a class="m-link" href="/admin/super-doctorList"><i class="icofont-doctor-alt fs-5"></i> <span>Doctor</span></a></li>
 
-
-
-            <li class="collapsed">
-                <a class="m-link" data-bs-toggle="collapse" data-bs-target="#menu-Doctor" href="#">
-                    <i class="icofont-doctor-alt fs-5"></i>  <span>Doctor</span> <span class="arrow icofont-rounded-down ms-auto text-end fs-5"></span></a>
-                <!-- Menu: Sub menu ul -->
-                <ul class="sub-menu collapse" id="menu-Doctor">
-                    <li><a class="ms-link" href="/admin/super-doctorList">All Doctors</a></li>
-                    <li><a class="ms-link" href="/admin/addDoctor">Add Doctor</a></li>
-                </ul>
-            </li>
 
         </ul>
 
