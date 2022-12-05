@@ -9,33 +9,33 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon"><i class="fas fa-heartbeat"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="">Online Appointment</a></h4>
+            <p class="description">We provide online service to get appointment of a specialist </p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon"><i class="fas fa-pills"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <h4 class="title"><a href="">Pharmacy</a></h4>
+            <p class="description">You can get pharmaceutical service from us </p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon"><i class="fas fa-hospital-user"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <h4 class="title"><a href="">Emergency Treatment</a></h4>
+            <p class="description">We provide emergency medical treatment 24/7</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon"><i class="fas fa-dna"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <h4 class="title"><a href="">Blood Bank</a></h4>
+            <p class="description">You can get blood and you can also store blood in our blood bank</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon"><i class="fas fa-wheelchair"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            <h4 class="title"><a href="">Day Care</a></h4>
+            <p class="description">You can get day care service for your children</p>
           </div>
           <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon"><i class="fas fa-notes-medical"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            <h4 class="title"><a href="">Vaccination</a></h4>
+            <p class="description">We provide vaccine for Covid-19, Dengue and for others disease.</p>
           </div>
         </div>
 

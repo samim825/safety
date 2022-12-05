@@ -73,46 +73,46 @@
   <main id="main">
 
     <!-- ======= Featured Services Section ======= -->
-    <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
+<%--    <section id="featured-services" class="featured-services">--%>
+<%--      <div class="container" data-aos="fade-up">--%>
 
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="fas fa-heartbeat"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
+<%--        <div class="row">--%>
+<%--          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">--%>
+<%--            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">--%>
+<%--              <div class="icon"><i class="fas fa-heartbeat"></i></div>--%>
+<%--              <h4 class="title"><a href="">Lorem Ipsum</a></h4>--%>
+<%--              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="fas fa-pills"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
+<%--          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">--%>
+<%--            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">--%>
+<%--              <div class="icon"><i class="fas fa-pills"></i></div>--%>
+<%--              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>--%>
+<%--              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="fas fa-thermometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
+<%--          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">--%>
+<%--            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">--%>
+<%--              <div class="icon"><i class="fas fa-thermometer"></i></div>--%>
+<%--              <h4 class="title"><a href="">Magni Dolores</a></h4>--%>
+<%--              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="fas fa-dna"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
+<%--          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">--%>
+<%--            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">--%>
+<%--              <div class="icon"><i class="fas fa-dna"></i></div>--%>
+<%--              <h4 class="title"><a href="">Nemo Enim</a></h4>--%>
+<%--              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-        </div>
+<%--        </div>--%>
 
-      </div>
-    </section><!-- End Featured Services Section -->
+<%--      </div>--%>
+<%--    </section><!-- End Featured Services Section -->--%>
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -129,90 +129,90 @@
 
     <!-- ======= About Us Section ======= -->
 
-    <%@include file="hospital/about.jsp" %>
+<%--    <%@include file="hospital/about.jsp" %>--%>
 
     <!-- End About Us Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
+<%--    <section id="counts" class="counts">--%>
+<%--      <div class="container" data-aos="fade-up">--%>
 
-        <div class="row no-gutters">
+<%--        <div class="row no-gutters">--%>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-user-md"></i>
-              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+<%--          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">--%>
+<%--            <div class="count-box">--%>
+<%--              <i class="fas fa-user-md"></i>--%>
+<%--              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>--%>
 
-              <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>
-              <a href="#">Find out more &raquo;</a>
-            </div>
-          </div>
+<%--              <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>--%>
+<%--              <a href="#">Find out more &raquo;</a>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="far fa-hospital"></i>
-              <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>
-              <a href="#">Find out more &raquo;</a>
-            </div>
-          </div>
+<%--          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">--%>
+<%--            <div class="count-box">--%>
+<%--              <i class="far fa-hospital"></i>--%>
+<%--              <span data-purecounter-start="0" data-purecounter-end="26" data-purecounter-duration="1" class="purecounter"></span>--%>
+<%--              <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>--%>
+<%--              <a href="#">Find out more &raquo;</a>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-flask"></i>
-              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>
-              <a href="#">Find out more &raquo;</a>
-            </div>
-          </div>
+<%--          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">--%>
+<%--            <div class="count-box">--%>
+<%--              <i class="fas fa-flask"></i>--%>
+<%--              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter"></span>--%>
+<%--              <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>--%>
+<%--              <a href="#">Find out more &raquo;</a>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="fas fa-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Awards</strong> rerum asperiores dolor molestiae doloribu</p>
-              <a href="#">Find out more &raquo;</a>
-            </div>
-          </div>
+<%--          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">--%>
+<%--            <div class="count-box">--%>
+<%--              <i class="fas fa-award"></i>--%>
+<%--              <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>--%>
+<%--              <p><strong>Awards</strong> rerum asperiores dolor molestiae doloribu</p>--%>
+<%--              <a href="#">Find out more &raquo;</a>--%>
+<%--            </div>--%>
+<%--          </div>--%>
 
-        </div>
+<%--        </div>--%>
 
-      </div>
-    </section><!-- End Counts Section -->
+<%--      </div>--%>
+<%--    </section><!-- End Counts Section -->--%>
 
     <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
+<%--    <section id="features" class="features">--%>
+<%--      <div class="container" data-aos="fade-up">--%>
 
-        <div class="row">
-          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
-            <div class="icon-box mt-5 mt-lg-0">
-              <i class="bx bx-receipt"></i>
-              <h4>Est labore ad</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-            </div>
-            <div class="icon-box mt-5">
-              <i class="bx bx-cube-alt"></i>
-              <h4>Harum esse qui</h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-            </div>
-            <div class="icon-box mt-5">
-              <i class="bx bx-images"></i>
-              <h4>Aut occaecati</h4>
-              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-            </div>
-            <div class="icon-box mt-5">
-              <i class="bx bx-shield"></i>
-              <h4>Beatae veritatis</h4>
-              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-            </div>
-          </div>
-          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");' data-aos="zoom-in"></div>
-        </div>
+<%--        <div class="row">--%>
+<%--          <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">--%>
+<%--            <div class="icon-box mt-5 mt-lg-0">--%>
+<%--              <i class="bx bx-receipt"></i>--%>
+<%--              <h4>Est labore ad</h4>--%>
+<%--              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>--%>
+<%--            </div>--%>
+<%--            <div class="icon-box mt-5">--%>
+<%--              <i class="bx bx-cube-alt"></i>--%>
+<%--              <h4>Harum esse qui</h4>--%>
+<%--              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>--%>
+<%--            </div>--%>
+<%--            <div class="icon-box mt-5">--%>
+<%--              <i class="bx bx-images"></i>--%>
+<%--              <h4>Aut occaecati</h4>--%>
+<%--              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>--%>
+<%--            </div>--%>
+<%--            <div class="icon-box mt-5">--%>
+<%--              <i class="bx bx-shield"></i>--%>
+<%--              <h4>Beatae veritatis</h4>--%>
+<%--              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>--%>
+<%--            </div>--%>
+<%--          </div>--%>
+<%--          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");' data-aos="zoom-in"></div>--%>
+<%--        </div>--%>
 
-      </div>
-    </section><!-- End Features Section -->
+<%--      </div>--%>
+<%--    </section><!-- End Features Section -->--%>
 
     <!-- ======= Services Section ======= -->
     <%@include file="hospital/services.jsp" %>
@@ -229,7 +229,7 @@
    <!-- End Departments Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <%@include file="hospital/testimonials.jsp" %>
+<%--    <%@include file="hospital/testimonials.jsp" %>--%>
    <!-- End Testimonials Section -->
 
     <!-- ======= Doctors Section ======= -->
@@ -365,15 +365,6 @@
                   { targets: [-1, -3], className: 'dt-body-right' }
                 ]
               });
-      // $('.deleterow').on('click',function(){
-      //     var tablename = $(this).closest('table').DataTable();
-      //     tablename
-      //         .row( $(this)
-      //             .parents('tr') )
-      //         .remove()
-      //         .draw();
-      //
-      // } );
 
 
 
