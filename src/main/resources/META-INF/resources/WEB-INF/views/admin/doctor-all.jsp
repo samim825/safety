@@ -26,9 +26,11 @@
                         </div>
                     </div>
                 </div> <!-- Row end  -->
-                <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 row-deck py-1 pb-4">
-
-    <table id="myProjectTable1" class="table table-hover align-middle mb-0" style="width:100%">
+                <div class="row clearfix g-3">
+                    <div class="col-sm-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+    <table id="doctors" class="table table-hover align-middle mb-0" style="width:100%">
         <thead>
         <tr>
             <th>#</th>
@@ -55,7 +57,7 @@
                 <span class="fw-bold"><%=cnt++%></span>
             </td>
             <td>
-                <img class="avatar rounded-circle" src="assets/images/xs/avatar1.jpg" alt="">
+<%--                <img class="avatar rounded-circle" src="assets/images/xs/avatar1.jpg" alt="">--%>
                 <span class="fw-bold ms-1"><%=doctor.getName()%></span>
             </td>
             <td>
@@ -86,7 +88,9 @@
         <% } %>
         </tbody>
     </table>
-
+                            </div>
+                            </div>
+                            </div>
                 </div>
             </div>
         </div>
@@ -99,4 +103,31 @@
 
 
 
-<%@include file="includes/footer.jsp"%>
+<!-- Jquery Core Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script>
+
+<!-- Plugin Js -->
+<script src="assets/bundles/apexcharts.bundle.js"></script>
+<script src="assets/plugin/jqueryuicalandar/jquery-ui.min.js"></script>
+<script src="assets/plugin/owlcarousel/owl.carousel.js"></script>
+<script src="assets/bundles/dataTables.bundle.js"></script>
+
+<!-- Jquery Page Js -->
+<script src="../js/template.js"></script>
+<script src="../js/page/index.js"></script>
+<script>
+    $('#doctors')
+        .addClass( 'nowrap' )
+        .dataTable( {
+            responsive: true,
+            columnDefs: [
+                { targets: [-1, -3], className: 'dt-body-right' }
+            ]
+        });
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.pixelwibes.com/template/ihealth/html/dist/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Sep 2022 13:13:22 GMT -->
+</html>

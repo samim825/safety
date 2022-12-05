@@ -57,7 +57,6 @@
                                 <span class="fw-bold"><%=cnt++%></span>
                             </td>
                             <td>
-                                <img class="avatar rounded-circle" src="assets/images/xs/avatar1.jpg" alt="">
                                 <span class="fw-bold ms-1"><%=doctor.getName()%></span>
                             </td>
                             <td>

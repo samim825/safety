@@ -1,6 +1,6 @@
 <div class="sidebar px-4 py-4 py-md-5 me-0">
     <div class="d-flex flex-column h-100">
-        <a href="/admin" class="mb-0 brand-icon">
+        <a href="#" class="mb-0 brand-icon">
                 <span class="logo-icon">
                     <i class="icofont-heart-beat fs-2"></i>
                 </span>

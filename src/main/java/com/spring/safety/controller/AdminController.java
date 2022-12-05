@@ -1,11 +1,13 @@
 package com.spring.safety.controller;
 
 import com.spring.safety.model.Department;
+import com.spring.safety.model.Doctor;
 import com.spring.safety.model.Hospital;
 import com.spring.safety.model.User;
 import com.spring.safety.service.DepartmentService;
 import com.spring.safety.service.HospitalService;
 import com.spring.safety.service.UserService;
+import com.spring.safety.service.impl.DoctorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -27,24 +29,24 @@ public class AdminController {
     @Autowired
     private DepartmentService departmentService;
 
+    @Autowired
+    private DoctorServiceImpl doctorService;
+
    @GetMapping({"/admin", "/admin/"})
     public ModelAndView goHomePage(HttpSession session, ModelAndView modelAndView){
 
        User user = (User) session.getAttribute("user");
 
-       System.out.println(user.toString());
-        System.out.println("Admin index page");
         modelAndView.addObject("user",user);
+
+        Hospital hospital = user.getHospital();
+        List<Department> departments = departmentService.findDepartmentByHospital(hospital);
+       modelAndView.addObject("totalDepartments", departments.size());
+       List<Doctor> doctorList = doctorService.findAllDoctorsByHospital(hospital.getId());
+        modelAndView.addObject("totalDoctors", doctorList.size());
         modelAndView.setViewName("admin/index");
         return modelAndView;
     }
-
-//    @GetMapping("/admin/home")
-//    public String goSuperAdminHomePage(){
-//
-//       return "admin/home";
-//    }
-
 
 
     @GetMapping("/admin/addDoctor")
