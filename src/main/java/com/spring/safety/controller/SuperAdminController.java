@@ -9,6 +9,7 @@ import com.spring.safety.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -30,8 +31,13 @@ public class SuperAdminController {
     public ModelAndView goSuperAdminHomePage(ModelAndView modelAndView){
 
         List<Doctor> doctorList = doctorService.findAllDoctors();
+        List<Hospital> activatedHospitalList = userService.findActiveHospital();
+        List<Hospital> deactivatedHospitals = userService.findInActiveHospital();
 
         modelAndView.addObject("doctors",doctorList);
+        modelAndView.addObject("activatedHospital", activatedHospitalList.size());
+        modelAndView.addObject("deactivatedHospitals", deactivatedHospitals.size());
+        modelAndView.addObject("totalDoctors", doctorList.size());
         modelAndView.setViewName("admin/home");
         return modelAndView;
     }
@@ -56,5 +62,25 @@ public class SuperAdminController {
         modelAndView.addObject("inActiveHospitals", inActiveHospitalList);
         modelAndView.setViewName("admin/hospital-all");
         return modelAndView;
+    }
+
+    @GetMapping("/admin/activeHospital/{id}")
+    public String activeHospital(ModelAndView modelAndView, @PathVariable String id){
+
+        System.out.println("Id : "+id);
+//        modelAndView.setViewName("redirect://admin/hospitalList");
+        Hospital hospital = hospitalService.findById(id).get();
+        userService.activateUser(hospital);
+        return "redirect:/admin/hospitalList";
+    }
+
+    @GetMapping("/admin/deActiveHospital/{id}")
+    public String deActiveHospital(ModelAndView modelAndView, @PathVariable String id){
+
+        System.out.println("Id : "+id);
+//        modelAndView.setViewName("redirect://admin/hospitalList");
+        Hospital hospital = hospitalService.findById(id).get();
+        userService.deActivateUser(hospital);
+        return "redirect:/admin/hospitalList";
     }
 }

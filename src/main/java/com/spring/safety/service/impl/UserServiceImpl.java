@@ -39,4 +39,14 @@ public class UserServiceImpl implements UserService {
     public List<Hospital> findInActiveHospital() {
         return userRepository.findInActiveHospital();
     }
+
+    @Override
+    public void activateUser(Hospital hospital) {
+        userRepository.doActiveUser(hospital);
+    }
+
+    @Override
+    public void deActivateUser(Hospital hospital) {
+        userRepository.doDeActiveUser(hospital);
+    }
 }

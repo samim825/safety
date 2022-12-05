@@ -16,4 +16,9 @@ public interface UserService {
     List<Hospital> findActiveHospital();
 
     List<Hospital> findInActiveHospital();
+
+    void activateUser(Hospital hospital);
+
+    void deActivateUser(Hospital hospital);
+
 }

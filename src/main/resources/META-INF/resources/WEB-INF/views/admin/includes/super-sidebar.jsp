@@ -10,7 +10,7 @@
 
         <ul class="menu-list flex-grow-1 mt-3">
             <li>
-                <a class="m-link" href="/admin">
+                <a class="m-link" href="/admin/home">
                     <i class="icofont-ui-home fs-5"></i> <span>Dashboard</span> </a>
             </li>
 

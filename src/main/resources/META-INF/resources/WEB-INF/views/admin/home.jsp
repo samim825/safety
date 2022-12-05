@@ -30,35 +30,17 @@
                                         <div class="card">
                                             <div class="card-body ">
                                                 <i class="icofont-patient-file fs-3 text-secondary"></i>
-                                                <h6 class="mt-3 mb-0 fw-bold small-14">Total Appointment</h6>
-                                                <span class="text-muted">400</span>
+                                                <h6 class="mt-3 mb-0 fw-bold small-14">Activated Hospital</h6>
+                                                <span class="text-muted">${activatedHospital}</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-sm-6">
                                         <div class="card">
                                             <div class="card-body ">
-                                                <i class="icofont-crutch fs-3 color-lightblue"></i>
-                                                <h6 class="mt-3 mb-0 fw-bold small-14">Total Patients</h6>
-                                                <span class="text-muted">117</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <div class="card">
-                                            <div class="card-body ">
-                                                <i class="icofont-doctor fs-3 color-light-orange"></i>
-                                                <h6 class="mt-3 mb-0 fw-bold small-14">Patients per Doctor</h6>
-                                                <span class="text-muted">16</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <div class="card">
-                                            <div class="card-body ">
-                                                <i class="icofont-king-monster fs-3 color-careys-pink"></i>
-                                                <h6 class="mt-3 mb-0 fw-bold small-14">Covid Patients </h6>
-                                                <span class="text-muted">144</span>
+                                                <i class="icofont-patient-file fs-3 text-secondary"></i>
+                                                <h6 class="mt-3 mb-0 fw-bold small-14">Deactivated Hospital</h6>
+                                                <span class="text-muted">${deactivatedHospitals}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -66,17 +48,8 @@
                                         <div class="card">
                                             <div class="card-body ">
                                                 <i class="icofont-doctor-alt fs-3 color-lavender-purple"></i>
-                                                <h6 class="mt-3 mb-0 fw-bold small-14">Total Doctor</h6>
-                                                <span class="text-muted">200</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6">
-                                        <div class="card">
-                                            <div class="card-body ">
-                                                <i class="icofont-nurse-alt fs-3 color-light-success"></i>
-                                                <h6 class="mt-3 mb-0 fw-bold small-14">Total Nurse </h6>
-                                                <span class="text-muted">84</span>
+                                                <h6 class="mt-3 mb-0 fw-bold small-14">Total Doctors</h6>
+                                                <span class="text-muted">${totalDoctors}</span>
                                             </div>
                                         </div>
                                     </div>

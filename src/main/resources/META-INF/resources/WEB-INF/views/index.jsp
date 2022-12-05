@@ -85,13 +85,6 @@
                     </div>
                 </div>
 
-<%--                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">--%>
-<%--                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">--%>
-<%--                        <div class="icon"><i class="fas fa-dna"></i></div>--%>
-<%--                        <h4 class="title"><a href="">Department</a></h4>--%>
-<%--                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
             </div>
 
         </div>

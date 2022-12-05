@@ -33,7 +33,7 @@ public class HomeController {
 
     @GetMapping("/")
     public ModelAndView goHome(ModelAndView modelAndView){
-        List<Hospital> hospitals = hospitalService.getAllHospitals();
+        List<Hospital> hospitals = userService.findActiveHospital();
         modelAndView.addObject("hospitals", hospitals);
         modelAndView.addObject("doctors", doctorService.findAllDoctors());
         modelAndView.setViewName("index");

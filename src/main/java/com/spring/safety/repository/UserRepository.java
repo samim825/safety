@@ -20,9 +20,20 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     User findByEmail(String email);
 
-    @Query("SELECT u.hospital FROM User u WHERE u.enabled = 1 ")
+    @Query("SELECT u.hospital FROM User u WHERE u.enabled = 1 and u.email <> 'admin@gmail.com'")
     List<Hospital> findActiveHospital();
 
     @Query("SELECT u.hospital FROM User u WHERE u.enabled = 0 ")
     List<Hospital> findInActiveHospital();
+
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE User u SET u.enabled = 1  where u.hospital = ?1")
+    void doActiveUser(Hospital hospital);
+
+    @Transactional
+    @Modifying
+    @Query("UPDATE User u SET u.enabled = 0  where u.hospital = ?1")
+    void doDeActiveUser(Hospital hospital);
 }

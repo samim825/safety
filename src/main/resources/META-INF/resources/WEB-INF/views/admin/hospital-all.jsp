@@ -26,8 +26,11 @@
                         </div>
                     </div>
                 </div> <!-- Row end  -->
-                <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 row-deck py-1 pb-4">
-                    <h2>Active Hospital</h2>
+                <div class="row clearfix g-3">
+                    <div class="col-sm-12">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h2>Active Hospital</h2>
                     <table id="myProjectTable1" class="table table-hover align-middle mb-0" style="width:100%">
                         <thead>
                         <tr>
@@ -71,20 +74,26 @@
                             <%--                                        </td>--%>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                    <button name="edit" data-id="<%=hospital.getId()%>" class="btn btn-outline-secondary edit" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#depedit"><i class="icofont-edit text-success"></i></button>
-                                    <button name="delete" data-bs-id="<%=hospital.getId()%>" class="btn btn-outline-secondary deptId" data-bs-toggle="modal" data-bs-target="#depDelete" value="<%=hospital.getId()%>" aria-disabled="true"><i class="icofont-ui-delete text-danger"></i></button>
+<%--                                    <button name="edit" data-id="<%=hospital.getId()%>" class="btn btn-outline-secondary edit" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#depedit"><i class="icofont-edit text-success"></i></button>--%>
+<%--                                    <button name="delete" data-bs-id="<%=hospital.getId()%>" class="btn btn-outline-secondary deptId" data-bs-toggle="modal" data-bs-target="#depDelete" value="<%=hospital.getId()%>" aria-disabled="true"><i class="icofont-ui-delete text-danger"></i></button>--%>
+                                    <a href="/admin/deActiveHospital/<%=hospital.getId()%>">Deactivated</a>
                                 </div>
                             </td>
                         </tr>
                         <% } %>
                         </tbody>
-                    </table>
+                    </table></div>
+                            </div>
+                            </div>
 
                 </div>
 
-                <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 row-deck py-1 pb-4">
-                    <h2>Pending Hospital List</h2>
-                    <table id="myProjectTable2" class="table table-hover align-middle mb-0" style="width:100%">
+
+                <div class="row clearfix g-3">
+                    <div class="col-sm-12">
+                        <div class="card mb-3">
+                            <div class="card-body">                    <h2>Pending Hospital List</h2>
+                                <table id="myProjectTable2" class="table table-hover align-middle mb-0" style="width:100%">
                         <thead>
                         <tr>
                             <th>#</th>
@@ -127,8 +136,10 @@
                             <%--                                        </td>--%>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                    <button name="edit" data-id="<%=hospital.getId()%>" class="btn btn-outline-secondary edit" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#depedit"><i class="icofont-edit text-success"></i></button>
-                                    <button name="delete" data-bs-id="<%=hospital.getId()%>" class="btn btn-outline-secondary deptId" data-bs-toggle="modal" data-bs-target="#depDelete" value="<%=hospital.getId()%>" aria-disabled="true"><i class="icofont-ui-delete text-danger"></i></button>
+<%--                                    <button name="edit" data-id="<%=hospital.getId()%>" class="btn btn-outline-secondary edit" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#depedit"><i class="icofont-edit text-success"></i></button>--%>
+<%--                                    <button name="delete" data-bs-id="<%=hospital.getId()%>" class="btn btn-outline-secondary deptId" data-bs-toggle="modal" data-bs-target="#depDelete" value="<%=hospital.getId()%>" aria-disabled="true"><i class="icofont-ui-delete text-danger"></i></button>--%>
+                                <a href="/admin/activeHospital/<%=hospital.getId()%>">Activated</a>
+
                                 </div>
                             </td>
                         </tr>
@@ -137,6 +148,9 @@
                     </table>
 
                 </div>
+                        </div>
+                        </div>
+                        </div>
 
             </div>
 
@@ -165,7 +179,15 @@
 <script src="../js/template.js"></script>
 <script src="../js/page/index.js"></script>
 <script>
-    $('#myDataTable')
+    $('#myProjectTable1')
+        .addClass( 'nowrap' )
+        .dataTable( {
+            responsive: true,
+            columnDefs: [
+                { targets: [-1, -3], className: 'dt-body-right' }
+            ]
+        });
+    $('#myProjectTable2')
         .addClass( 'nowrap' )
         .dataTable( {
             responsive: true,
