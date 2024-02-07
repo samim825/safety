@@ -16,7 +16,7 @@
                         <div class="card border-0 w280">
                             <div class="card-body pb-0">
                                 <div class="d-flex py-1">
-                                    <img class="avatar rounded-circle" src="assets/images/profile_av.png" alt="profile">
+                                    <img class="avatar rounded-circle" src="assets/images/my_photo.jpg" alt="profile">
                                     <div class="flex-fill ms-3">
                                         <p class="mb-0"><span class="font-weight-bold">Super Admin</span></p>
                                         <small class="">admin@gmail.com</small>

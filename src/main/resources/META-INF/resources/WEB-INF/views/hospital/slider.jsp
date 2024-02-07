@@ -16,7 +16,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
+        <div class="carousel-item" style="background-image: url(assets/img/slide/Medinova_Dhanmondi.webp)">
           <div class="container">
             <h2>Welcome to <span><%=hospital.getHospitalName()%></span></h2>
             <p>A Digital Health Care Service Through the country</p>
