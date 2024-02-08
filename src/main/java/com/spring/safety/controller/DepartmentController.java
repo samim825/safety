@@ -3,6 +3,7 @@ package com.spring.safety.controller;
 import com.spring.safety.model.Department;
 import com.spring.safety.model.User;
 import com.spring.safety.service.DepartmentService;
+import lombok.RequiredArgsConstructor;
 import net.bytebuddy.matcher.StringMatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,10 +16,11 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/admin")
+@RequiredArgsConstructor
 public class DepartmentController {
 
-    @Autowired
-    private DepartmentService departmentService;
+
+    private final DepartmentService departmentService;
 
     @PostMapping("/department/save")
     public String save(@ModelAttribute Department department, HttpSession session){

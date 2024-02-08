@@ -6,6 +6,7 @@ import com.spring.safety.model.User;
 import com.spring.safety.service.impl.DoctorServiceImpl;
 import com.spring.safety.service.impl.HospitalServiceImpl;
 import com.spring.safety.service.impl.UserServiceImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,16 +17,12 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class SuperAdminController {
 
-    @Autowired
-    HospitalServiceImpl hospitalService;
-    @Autowired
-    DoctorServiceImpl doctorService;
-
-    @Autowired
-    UserServiceImpl userService;
-
+    private final HospitalServiceImpl hospitalService;
+    private final DoctorServiceImpl doctorService;
+    private final UserServiceImpl userService;
 
     @GetMapping("/admin/home")
     public ModelAndView goSuperAdminHomePage(ModelAndView modelAndView){

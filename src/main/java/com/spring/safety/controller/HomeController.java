@@ -9,12 +9,14 @@ import com.spring.safety.service.DoctorService;
 import com.spring.safety.service.HospitalService;
 import com.spring.safety.service.UserService;
 import com.spring.safety.service.impl.EmailService;
+import com.spring.safety.util.Utils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,13 +45,12 @@ public class HomeController {
     private final EmailService emailService;
 
     @GetMapping("/")
-    public ModelAndView goHome(ModelAndView modelAndView){
+    public String goHome(Model model){
         List<Hospital> hospitals = userService.findActiveHospital();
-        modelAndView.addObject("hospitals", hospitals);
-        modelAndView.addObject("doctors", doctorService.findAllDoctors());
-        modelAndView.setViewName("index");
+        model.addAttribute("hospitals", hospitals);
+        model.addAttribute("doctors", doctorService.findAllDoctors());
         emailService.sendEmail();
-        return modelAndView;
+        return Utils.getPrefixView("index");
     }
 
     @PostMapping("/register")

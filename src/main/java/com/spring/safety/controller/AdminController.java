@@ -8,6 +8,7 @@ import com.spring.safety.service.DepartmentService;
 import com.spring.safety.service.HospitalService;
 import com.spring.safety.service.UserService;
 import com.spring.safety.service.impl.DoctorServiceImpl;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -19,18 +20,17 @@ import javax.websocket.server.PathParam;
 import java.util.List;
 
 @Controller
+@RequiredArgsConstructor
 public class AdminController {
 
-    @Autowired
-    private HospitalService hospitalService;
-    @Autowired
-    private UserService userService;
 
-    @Autowired
-    private DepartmentService departmentService;
+    private final HospitalService hospitalService;
 
-    @Autowired
-    private DoctorServiceImpl doctorService;
+    private final UserService userService;
+
+    private final DepartmentService departmentService;
+
+    private final DoctorServiceImpl doctorService;
 
    @GetMapping({"/admin", "/admin/"})
     public ModelAndView goHomePage(HttpSession session, ModelAndView modelAndView){

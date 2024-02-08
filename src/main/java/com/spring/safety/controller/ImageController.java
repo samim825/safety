@@ -1,6 +1,7 @@
 package com.spring.safety.controller;
 
 import com.spring.safety.service.impl.ImageDataService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,10 +14,10 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping("/images")
+@RequiredArgsConstructor
 public class ImageController {
 
-    @Autowired
-    private ImageDataService service;
+    private final ImageDataService service;
 
     @PostMapping
     public ResponseEntity<?> uploadImageToDatabase(@RequestParam("image")MultipartFile file) throws IOException {
